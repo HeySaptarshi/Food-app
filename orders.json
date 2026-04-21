@@ -1,0 +1,17 @@
+[
+    {
+        "user": "Rahul",
+        "cart": {
+            "Pizza": 2
+        },
+        "total": 540
+    },
+    {
+        "user": "Sam",
+        "cart": {
+            "Pasta": 5,
+            "Maggie": 2
+        },
+        "total": 940
+    }
+]
