@@ -6,5 +6,9 @@
     {
         "username": "Sam",
         "password": "12"
+    },
+    {
+        "username": "Po",
+        "password": "12"
     }
 ]

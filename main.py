@@ -1,4 +1,6 @@
 import json
+import random
+import datetime
 
 def load_data(file):
     try:
@@ -39,6 +41,21 @@ def show_menu(menu):
     for item, price in menu.items():
         print(f"{item}: ₹{price}")
 
+def view_cart(menu, cart):
+    if not cart:
+        print("Cart is empty")
+        return
+
+    print("\n--- YOUR CART ---")
+    total = 0
+
+    for item, qty in cart.items():
+        price = menu[item] * qty
+        print(f"{item} x{qty} = ₹{price}")
+        total += price
+
+    print("Current Total:", total)
+
 def add_to_cart(menu, cart):
     item = input("Enter item: ")
     if item in menu:
@@ -76,11 +93,19 @@ def calculate_bill(menu, cart):
 def save_order(username, cart, total):
     orders = load_data("orders.json")
 
+    order_id = random.randint(1000, 9999)
+    time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+
     orders.append({
+        "order_id": order_id,
         "user": username,
         "cart": cart,
-        "total": total
+        "total": total,
+        "time": time
     })
+
+    print(f"Order ID: {order_id}")
+    print(f"Time: {time}")
 
     save_data("orders.json", orders)
     print("Order placed successfully!")
@@ -92,7 +117,8 @@ def user_flow(username):
     while True:
         print("\n1. View Menu")
         print("2. Add to Cart")
-        print("3. Checkout")
+        print("3. View Cart")
+        print("4. Checkout")
 
         choice = input("Choice: ")
 
@@ -104,6 +130,9 @@ def user_flow(username):
             add_to_cart(menu, cart)
 
         elif choice == "3":
+            view_cart(menu, cart)
+
+        elif choice == "4":
             if not cart:
                 print("Cart is empty!")
             else:

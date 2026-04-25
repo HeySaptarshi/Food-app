@@ -13,5 +13,33 @@
             "Maggie": 2
         },
         "total": 940
+    },
+    {
+        "order_id": 8045,
+        "user": "Po",
+        "cart": {
+            "Burger": 2,
+            "Pasta": 2
+        },
+        "total": 580,
+        "time": "2026-04-26 01:04"
+    },
+    {
+        "order_id": 7315,
+        "user": "Po",
+        "cart": {
+            "Burger": 5
+        },
+        "total": 580,
+        "time": "2026-04-26 01:05"
+    },
+    {
+        "order_id": 9161,
+        "user": "Po",
+        "cart": {
+            "Pizza": 6
+        },
+        "total": 1390,
+        "time": "2026-04-26 01:08"
     }
 ]
