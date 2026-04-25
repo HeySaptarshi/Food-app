@@ -1,14 +1,19 @@
 # Food Ordering & Management System
 
 A Python-based CLI application for food ordering.
+It allows users to register, login, browse menu, add items to cart, and place orders with billing.
 
-## Features
-- User authentication
-- Menu system
-- Cart with quantity
-- Billing with discount
-- Admin panel
-- Order storage using JSON
+## 🚀 Features
+-  User Registration & Login  
+-  Menu Display  
+-  Cart with Quantity Management  
+-  View Cart before Checkout  
+-  Billing with Discount & Delivery Charges  
+-  Order ID Generation  
+-  Timestamp for Orders  
+-  Admin Panel for Menu Management  
+-  Data stored using JSON  
+
 
 ## Tech Stack
 - Python
